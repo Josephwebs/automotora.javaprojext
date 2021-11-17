@@ -1,0 +1,40 @@
+esquema DDL base de datos automotora
+
+CREATE TABLE marca (
+    id      INTEGER NOT NULL,
+    nombre  VARCHAR(35) NOT NULL
+);
+
+ALTER TABLE marca ADD CONSTRAINT marca_pk PRIMARY KEY ( id );
+
+CREATE TABLE modelo (
+    id        INTEGER NOT NULL,
+    nombre    VARCHAR(25) NOT NULL,
+    marca_id  INTEGER NOT NULL
+);
+
+ALTER TABLE modelo ADD CONSTRAINT modelo_pk PRIMARY KEY ( id );
+
+CREATE TABLE vehiculo (
+    numerochasis    INTEGER NOT NULL,
+    color           VARCHAR(15) NOT NULL,
+    precio          INTEGER NOT NULL,
+    tranmision      VARCHAR(20) NOT NULL,
+    disponibilidad  CHAR(1) NOT NULL,
+    marca_id        INTEGER NOT NULL,
+    modelo_id       INTEGER NOT NULL
+);
+
+ALTER TABLE vehiculo ADD CONSTRAINT vehiculo_pk PRIMARY KEY ( numerochasis );
+
+ALTER TABLE modelo
+    ADD CONSTRAINT modelo_marca_fk FOREIGN KEY ( marca_id )
+        REFERENCES marca ( id );
+
+ALTER TABLE vehiculo
+    ADD CONSTRAINT vehiculo_marca_fk FOREIGN KEY ( marca_id )
+        REFERENCES marca ( id );
+
+ALTER TABLE vehiculo
+    ADD CONSTRAINT vehiculo_modelo_fk FOREIGN KEY ( modelo_id )
+        REFERENCES modelo ( id );
