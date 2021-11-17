@@ -9,7 +9,7 @@ package modelo;
  * @author José Alcantara
  */
 public class Vehiculo {
-     private int numeroCha;
+     private int numeroChasis;
      private Marca marca;
      private Modelo modelo;
      private String color; 
@@ -18,7 +18,7 @@ public class Vehiculo {
      private boolean stock;
 
     public Vehiculo(int numeroChasis, Marca marca, Modelo modelo, String color, String precio, String transmision, boolean stock) {
-        this.numeroCha = numeroChasis;
+        this.numeroChasis = numeroChasis;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
@@ -28,11 +28,11 @@ public class Vehiculo {
     }
 
     public int getNumeroChasis() {
-        return numeroCha;
+        return numeroChasis;
     }
 
     public void setNumeroChasis(int numeroChasis) {
-        this.numeroCha = numeroChasis;
+        this.numeroChasis = numeroChasis;
     }
 
     public Marca getMarca() {
