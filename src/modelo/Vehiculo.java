@@ -13,11 +13,14 @@ public class Vehiculo {
      private Marca marca;
      private Modelo modelo;
      private String color; 
-     private String precio;
+     private int precio;
      private String transmision;
      private boolean stock;
 
-    public Vehiculo(int numeroChasis, Marca marca, Modelo modelo, String color, String precio, String transmision, boolean stock) {
+    public Vehiculo() {
+    }
+
+    public Vehiculo(int numeroChasis, Marca marca, Modelo modelo, String color, int precio, String transmision, boolean stock) {
         this.numeroChasis = numeroChasis;
         this.marca = marca;
         this.modelo = modelo;
@@ -59,11 +62,11 @@ public class Vehiculo {
         this.color = color;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 

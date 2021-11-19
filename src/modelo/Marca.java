@@ -17,6 +17,9 @@ public class Marca {
         this.nombre = nombre;
     }
 
+    public Marca() {
+    }
+
     public int getId() {
         return id;
     }
