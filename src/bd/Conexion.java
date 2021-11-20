@@ -14,7 +14,7 @@ public class Conexion {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/automotora", "root", "1234");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/automotora", "root", "123gogo.");
             System.out.println("Conexión exitosa");
         } catch (SQLException e) {
             System.out.println("Error de conexión" + e.getMessage());

@@ -10,14 +10,17 @@ package modelo;
  */
 public class Vehiculo {
      private int numeroChasis;
-     private Marca marca;
-     private Modelo modelo;
+     private int marca;
+     private int modelo;
      private String color; 
-     private String precio;
+     private int precio;
      private String transmision;
      private boolean stock;
 
-    public Vehiculo(int numeroChasis, Marca marca, Modelo modelo, String color, String precio, String transmision, boolean stock) {
+    public Vehiculo() {
+    }
+
+    public Vehiculo(int numeroChasis, int marca, int modelo, String color, int precio, String transmision, boolean stock) {
         this.numeroChasis = numeroChasis;
         this.marca = marca;
         this.modelo = modelo;
@@ -35,19 +38,19 @@ public class Vehiculo {
         this.numeroChasis = numeroChasis;
     }
 
-    public Marca getMarca() {
+    public int getMarca() {
         return marca;
     }
 
-    public void setMarca(Marca marca) {
+    public void setMarca(int marca) {
         this.marca = marca;
     }
 
-    public Modelo getModelo() {
+    public int getModelo() {
         return modelo;
     }
 
-    public void setModelo(Modelo modelo) {
+    public void setModelo(int modelo) {
         this.modelo = modelo;
     }
 
@@ -59,11 +62,11 @@ public class Vehiculo {
         this.color = color;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
