@@ -33,7 +33,7 @@ public class Editar extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         EnviarLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(76, 49, 49));
 
@@ -52,7 +52,7 @@ public class Editar extends javax.swing.JFrame {
         EnviarLabel1.setForeground(new java.awt.Color(255, 255, 255));
         EnviarLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EnviarLabel1.setText("Modificar");
-        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

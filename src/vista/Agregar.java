@@ -252,6 +252,7 @@ public class Agregar extends javax.swing.JFrame {
         Vehiculo vehiculo = new Vehiculo(numChasis, marca, modelo, color, precio, transmision, stock);
         try {
             r.Agregar(vehiculo);
+            JOptionPane.showMessageDialog(this, "Se agregó el vehiculo exitosamente ", "Información", JOptionPane.INFORMATION_MESSAGE);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Vehiculo" + vehiculo.getModelo(), "Error", JOptionPane.WARNING_MESSAGE);
             Logger.getLogger(Agregar.class.getName()).log(Level.SEVERE, null, ex);

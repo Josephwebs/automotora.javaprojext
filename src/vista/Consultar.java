@@ -40,7 +40,7 @@ public class Consultar extends javax.swing.JFrame {
         ChasisLabel2 = new javax.swing.JLabel();
         RangoField = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(76, 49, 49));
 
@@ -51,7 +51,7 @@ public class Consultar extends javax.swing.JFrame {
         EnviarLabel1.setForeground(new java.awt.Color(255, 255, 255));
         EnviarLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EnviarLabel1.setText("Consultar");
-        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -81,13 +81,13 @@ public class Consultar extends javax.swing.JFrame {
         ChasisLabel.setForeground(new java.awt.Color(255, 255, 255));
         ChasisLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ChasisLabel.setText("Marca");
-        ChasisLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ChasisLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         ChasisLabel1.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         ChasisLabel1.setForeground(new java.awt.Color(255, 255, 255));
         ChasisLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ChasisLabel1.setText("Transmision");
-        ChasisLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ChasisLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         TransmisionField2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Automático", "Manual" }));
         TransmisionField2.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +100,7 @@ public class Consultar extends javax.swing.JFrame {
         ChasisLabel2.setForeground(new java.awt.Color(255, 255, 255));
         ChasisLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ChasisLabel2.setText("Rango de precio");
-        ChasisLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ChasisLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

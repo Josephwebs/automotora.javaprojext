@@ -46,7 +46,7 @@ public class Borrar extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(76, 49, 49));
 
@@ -64,14 +64,14 @@ public class Borrar extends javax.swing.JFrame {
         EnviarLabel1.setForeground(new java.awt.Color(255, 255, 255));
         EnviarLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EnviarLabel1.setText("Borrar");
-        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout BorrarPanelLayout = new javax.swing.GroupLayout(BorrarPanel);
         BorrarPanel.setLayout(BorrarPanelLayout);
         BorrarPanelLayout.setHorizontalGroup(
             BorrarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BorrarPanelLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addComponent(EnviarLabel1)
                 .addGap(62, 62, 62))
         );

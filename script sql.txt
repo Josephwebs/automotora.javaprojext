@@ -1,4 +1,4 @@
-esquema DDL base de datos automotora
+/*esquema DDL base de datos automotora*/
 
 CREATE TABLE marca (
     id      INTEGER NOT NULL,
@@ -38,3 +38,37 @@ ALTER TABLE vehiculo
 ALTER TABLE vehiculo
     ADD CONSTRAINT vehiculo_modelo_fk FOREIGN KEY ( modelo_id )
         REFERENCES modelo ( id );
+
+/*insercion de datos en las tablas de modelo y marca*/
+
+INSERT INTO marca(id, nombre) VALUES (1,"ford");
+INSERT INTO marca(id, nombre) VALUES (2,"chevrolet");
+INSERT INTO marca(id, nombre) VALUES (3,"mazda");
+INSERT INTO marca(id, nombre) VALUES (4,"zusuki");
+INSERT INTO marca(id, nombre) VALUES (5,"BYD");
+INSERT INTO marca(id, nombre) VALUES (6,"fiat");
+INSERT INTO marca(id, nombre) VALUES (7,"peugeot");
+
+INSERT INTO modelo(id, nombre, marca_id) VALUES (1,"fiesta",1);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (2,"aveo",2);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (3,"3",3);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (4,"swing",4);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (5,"F0",5);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (6,"oneway",6);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (7,"308",7);
+
+INSERT INTO modelo(id, nombre, marca_id) VALUES (8,"Explorer",1);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (9,"Sport",1);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (10,"Alero",2);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (11,"Astro Van",2);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (12,"CX-30",3);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (13,"MPV",3);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (14,"Splash",4);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (15,"Valeno",4);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (16,"S6",5);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (17,"G3",5);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (18,"Bravo",6);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (19,"Croma",6);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (20,"4007",7);
+INSERT INTO modelo(id, nombre, marca_id) VALUES (21,"4008",7);
+
