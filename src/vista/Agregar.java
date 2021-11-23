@@ -85,14 +85,14 @@ public class Agregar extends javax.swing.JFrame {
         EnviarLabel.setForeground(new java.awt.Color(255, 255, 255));
         EnviarLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EnviarLabel.setText("Enviar");
-        EnviarLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EnviarLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout EnviarPanelLayout = new javax.swing.GroupLayout(EnviarPanel);
         EnviarPanel.setLayout(EnviarPanelLayout);
         EnviarPanelLayout.setHorizontalGroup(
             EnviarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EnviarPanelLayout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addComponent(EnviarLabel)
                 .addGap(62, 62, 62))
         );
@@ -107,39 +107,44 @@ public class Agregar extends javax.swing.JFrame {
         ChasisLabel.setForeground(new java.awt.Color(255, 255, 255));
         ChasisLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ChasisLabel.setText("Chasis");
-        ChasisLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ChasisLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         PrecioLabel.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         PrecioLabel.setForeground(new java.awt.Color(255, 255, 255));
         PrecioLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         PrecioLabel.setText("Precio");
-        PrecioLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PrecioLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         MarcaLabel.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         MarcaLabel.setForeground(new java.awt.Color(255, 255, 255));
         MarcaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MarcaLabel.setText("Marca");
-        MarcaLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MarcaLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         ColorLabel2.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         ColorLabel2.setForeground(new java.awt.Color(255, 255, 255));
         ColorLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ColorLabel2.setText("Color");
-        ColorLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ColorLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         TransmisionField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Automático", "Manual" }));
+        TransmisionField.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                TransmisionFieldItemStateChanged(evt);
+            }
+        });
 
         ModeloLabel.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         ModeloLabel.setForeground(new java.awt.Color(255, 255, 255));
         ModeloLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ModeloLabel.setText("Modelo");
-        ModeloLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ModeloLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         TransmisionLabel2.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         TransmisionLabel2.setForeground(new java.awt.Color(255, 255, 255));
         TransmisionLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TransmisionLabel2.setText("Transmision");
-        TransmisionLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TransmisionLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel6.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -262,6 +267,10 @@ public class Agregar extends javax.swing.JFrame {
     private void ChkStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChkStockActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ChkStockActionPerformed
+
+    private void TransmisionFieldItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_TransmisionFieldItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TransmisionFieldItemStateChanged
 
     /**
      * @param args the command line arguments
