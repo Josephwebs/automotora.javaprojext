@@ -7,7 +7,10 @@ package controlador;
 import bd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import modelo.Vehiculo;
 
 /**
@@ -34,11 +37,43 @@ public class Registro {
             c.close();
             return true;
         } catch (SQLException e) {
-            System.out.println("Error SQL al agregar vehiculo" + e.getMessage());
+            System.out.println("Error SQL al agregar vehiculo " + e.getMessage());
             return false;
         } catch (Exception e) {
             System.out.println("Error al agregar vehiculo" + e.getMessage());
             return false;
         }
     }    
+    
+    public List<Vehiculo> consultar() {
+        java.util.List<Vehiculo> lista = new ArrayList<>();
+
+        try {
+            Conexion conexion1 = new Conexion();
+            Connection cnx = conexion1.obtenerConexion();
+
+            String query = "SELECT numerochasis, marca_id, tranmision, precio FROM vehiculo order by numerochasis";
+            PreparedStatement stmt = cnx.prepareStatement(query);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Vehiculo vehiculo = new Vehiculo();
+                vehiculo.setNumeroChasis(rs.getInt("numerochasis"));
+                vehiculo.setMarca(rs.getInt("marca_id"));
+                vehiculo.setTransmision(rs.getString("tranmision"));
+                vehiculo.setPrecio(rs.getInt("precio"));
+
+                lista.add(vehiculo);
+            }
+            rs.close();
+            stmt.close();
+            cnx.close();
+        } catch (SQLException e) {
+            System.out.println("Error SQL al listar Vehiculos" + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error al listar Vehiculos" + e.getMessage());
+        }
+        return lista;
+    }
 }
