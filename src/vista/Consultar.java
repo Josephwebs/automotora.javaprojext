@@ -6,6 +6,7 @@ package vista;
 
 import controlador.Registro;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Vehiculo;
 
@@ -236,18 +237,27 @@ public class Consultar extends javax.swing.JFrame {
 
     private void btnEnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseClicked
         Registro rg = new Registro();
-        int nroChasis = Integer.parseInt(txttNumero.getText()); 
-        Vehiculo obj = rg.buscarVehiculo(nroChasis);
-        
-        DefaultTableModel modelo = (DefaultTableModel) tblDatos.getModel();
-        modelo.setRowCount(0);
-        int nChasis = obj.getNumeroChasis();
-        String marca = rg.buscarMarca(obj.getMarca());
-        String transmision = obj.getTransmision();
-        int precio  = obj.getPrecio();
-        String color= obj.getColor();
-        boolean disponibilidad = obj.isStock();
-        modelo.addRow(new Object[]{nChasis, marca, transmision, precio, color, disponibilidad});
+        if (!(txttNumero.getText().isEmpty())){
+            try{
+            int nroChasis = Integer.parseInt(txttNumero.getText());
+            Vehiculo obj = rg.buscarVehiculo(nroChasis);
+            DefaultTableModel modelo = (DefaultTableModel) tblDatos.getModel();
+            modelo.setRowCount(0);
+            int nChasis = obj.getNumeroChasis();
+            String marca = rg.buscarMarca(obj.getMarca());
+            String transmision = obj.getTransmision();
+            int precio  = obj.getPrecio();
+            String color= obj.getColor();
+            boolean disponibilidad = obj.isStock();
+            modelo.addRow(new Object[]{nChasis, marca, transmision, precio, color, disponibilidad});
+            
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Caracter invalido, Ingrese solo numeros", "Error", JOptionPane.WARNING_MESSAGE);
+            }
+            
+        }else{
+            JOptionPane.showMessageDialog(this, "Ingrese el numero de chasis para buscar el vehiculo", "Error", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_btnEnviarMouseClicked
 
     private void txttNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttNumeroActionPerformed
