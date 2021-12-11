@@ -36,13 +36,12 @@ public class Agregar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton1 = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         NumChasisField = new javax.swing.JTextField();
         ColorField = new javax.swing.JTextField();
         PrecioField = new javax.swing.JTextField();
-        ModeloField = new javax.swing.JTextField();
-        MarcaField = new javax.swing.JTextField();
         ChkStock = new javax.swing.JCheckBox();
         EnviarPanel = new javax.swing.JPanel();
         EnviarLabel = new javax.swing.JLabel();
@@ -54,6 +53,10 @@ public class Agregar extends javax.swing.JFrame {
         ModeloLabel = new javax.swing.JLabel();
         TransmisionLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        ModeloField = new javax.swing.JComboBox<>();
+        MarcaField = new javax.swing.JComboBox<>();
+
+        jToggleButton1.setText("jToggleButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -151,20 +154,17 @@ public class Agregar extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Complete los siguientes campos");
 
+        ModeloField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "1. fiesta", "2. aveo ", "3. 3 ", "4. swing ", "5. F0 ", "6. oneway ", "7. 308 ", "8. Explorer ", "9. Sport ", "10. Alero ", "11. Astro Van ", "12. CX-30 ", "13. MPV ", "14. Splash ", "15. Valeno ", "16. S6 ", "17. G3 ", "18. Bravo", "19. Croma", "20. 4007", "21. 4008", " " }));
+
+        MarcaField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "1. ford", "2. chevrolet", "3. mazda", "4. zusuki", "5. BYD", "6. fiat", "7. peugeot" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(EnviarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(152, 152, 152))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(jLabel5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -191,12 +191,18 @@ public class Agregar extends javax.swing.JFrame {
                             .addComponent(MarcaLabel)
                             .addComponent(ModeloLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(TransmisionField, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(MarcaField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(ModeloField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(TransmisionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ModeloField, javax.swing.GroupLayout.Alignment.LEADING, 0, 110, Short.MAX_VALUE)
+                            .addComponent(MarcaField, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(EnviarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(35, 53, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(140, 140, 140))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +211,7 @@ public class Agregar extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NumChasisField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ChasisLabel)
@@ -216,29 +222,29 @@ public class Agregar extends javax.swing.JFrame {
                     .addComponent(ColorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ColorLabel2)
                     .addComponent(MarcaLabel)
-                    .addComponent(MarcaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ModeloField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PrecioField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PrecioLabel)
                     .addComponent(ModeloLabel)
-                    .addComponent(ModeloField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MarcaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(ChkStock)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(EnviarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
         );
 
         pack();
@@ -248,8 +254,8 @@ public class Agregar extends javax.swing.JFrame {
         Registro r = new Registro();
         boolean stock = ChkStock.isSelected();
         String color = ColorField.getText();
-        int marca = Integer.parseInt(MarcaField.getText());
-        int modelo = Integer.parseInt(ModeloField.getText());
+        int marca = (ModeloField.getSelectedIndex());
+        int modelo = (ModeloField.getSelectedIndex());
         int numChasis = Integer.parseInt(NumChasisField.getText());
         int precio = Integer.parseInt(PrecioField.getText());
         String transmision = TransmisionField.getSelectedItem().toString();
@@ -260,6 +266,7 @@ public class Agregar extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Se agregó el vehiculo exitosamente ", "Información", JOptionPane.INFORMATION_MESSAGE);
             } else{
                 JOptionPane.showMessageDialog(this, "Existe un vehiculo con el mismo nunmero de chasis", "Error", JOptionPane.WARNING_MESSAGE);
+                System.out.println(marca);
             }
             } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Vehiculo" + vehiculo.getModelo(), "Error", JOptionPane.WARNING_MESSAGE);
@@ -317,9 +324,9 @@ public class Agregar extends javax.swing.JFrame {
     private javax.swing.JLabel ColorLabel2;
     private javax.swing.JLabel EnviarLabel;
     private javax.swing.JPanel EnviarPanel;
-    private javax.swing.JTextField MarcaField;
+    private javax.swing.JComboBox<String> MarcaField;
     private javax.swing.JLabel MarcaLabel;
-    private javax.swing.JTextField ModeloField;
+    private javax.swing.JComboBox<String> ModeloField;
     private javax.swing.JLabel ModeloLabel;
     private javax.swing.JTextField NumChasisField;
     private javax.swing.JTextField PrecioField;
@@ -329,5 +336,6 @@ public class Agregar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

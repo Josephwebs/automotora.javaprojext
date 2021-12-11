@@ -29,19 +29,20 @@ public class Consultar extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jSeparator1 = new javax.swing.JSeparator();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel2 = new javax.swing.JPanel();
         btnConsultar = new javax.swing.JPanel();
-        EnviarLabel1 = new javax.swing.JLabel();
+        btnEnviar = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        ChasisLabel = new javax.swing.JLabel();
-        ChasisLabel1 = new javax.swing.JLabel();
-        transcombox = new javax.swing.JComboBox<>();
-        ChasisLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblVehiculos = new javax.swing.JTable();
-        marcaCombox = new javax.swing.JComboBox<>();
-        precioCombox = new javax.swing.JComboBox<>();
+        tblDatos = new javax.swing.JTable();
+        btnConsultar1 = new javax.swing.JPanel();
+        btnTodos = new javax.swing.JLabel();
+        txttNumero = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -51,14 +52,14 @@ public class Consultar extends javax.swing.JFrame {
         btnConsultar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
         btnConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        EnviarLabel1.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
-        EnviarLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        EnviarLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EnviarLabel1.setText("Consultar");
-        EnviarLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        EnviarLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnEnviar.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
+        btnEnviar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEnviar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnEnviar.setText("Consultar");
+        btnEnviar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEnviar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EnviarLabel1MouseClicked(evt);
+                btnEnviarMouseClicked(evt);
             }
         });
 
@@ -66,16 +67,11 @@ public class Consultar extends javax.swing.JFrame {
         btnConsultar.setLayout(btnConsultarLayout);
         btnConsultarLayout.setHorizontalGroup(
             btnConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnConsultarLayout.createSequentialGroup()
-                .addComponent(EnviarLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         btnConsultarLayout.setVerticalGroup(
             btnConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnConsultarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(EnviarLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(btnEnviar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
         );
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,61 +80,78 @@ public class Consultar extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Complete los siguientes campos");
+        jLabel8.setText("Complete el siguiente campo");
 
-        ChasisLabel.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
-        ChasisLabel.setForeground(new java.awt.Color(255, 255, 255));
-        ChasisLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ChasisLabel.setText("Marca");
-        ChasisLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tblDatos.setBackground(new java.awt.Color(179, 62, 66));
+        tblDatos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
+        tblDatos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        tblDatos.setForeground(new java.awt.Color(255, 255, 255));
+        tblDatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Numero Chasis", "Marca", "transmision", "Precio", "Color", "disponible"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
 
-        ChasisLabel1.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
-        ChasisLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        ChasisLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ChasisLabel1.setText("Transmision");
-        ChasisLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tblDatos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
+        tblDatos.setGridColor(new java.awt.Color(255, 153, 0));
+        tblDatos.setSelectionBackground(new java.awt.Color(255, 102, 102));
+        tblDatos.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane2.setViewportView(tblDatos);
 
-        transcombox.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        transcombox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Automático", "Manual" }));
-        transcombox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transcomboxActionPerformed(evt);
+        btnConsultar1.setBackground(new java.awt.Color(179, 62, 66));
+        btnConsultar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
+        btnConsultar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnTodos.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
+        btnTodos.setForeground(new java.awt.Color(255, 255, 255));
+        btnTodos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnTodos.setText("Consultar Todos");
+        btnTodos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTodosMouseClicked(evt);
             }
         });
 
-        ChasisLabel2.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
-        ChasisLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        ChasisLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ChasisLabel2.setText("Rango de precio");
-        ChasisLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        javax.swing.GroupLayout btnConsultar1Layout = new javax.swing.GroupLayout(btnConsultar1);
+        btnConsultar1.setLayout(btnConsultar1Layout);
+        btnConsultar1Layout.setHorizontalGroup(
+            btnConsultar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnTodos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+        );
+        btnConsultar1Layout.setVerticalGroup(
+            btnConsultar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnTodos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+        );
 
-        tblVehiculos.setBackground(new java.awt.Color(179, 62, 66));
-        tblVehiculos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
-        tblVehiculos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        tblVehiculos.setForeground(new java.awt.Color(255, 255, 255));
-        tblVehiculos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Numero Chasis", "Marca", "transmision", "Precio"
+        txttNumero.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
+        txttNumero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttNumeroActionPerformed(evt);
             }
-        ));
-        tblVehiculos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
-        tblVehiculos.setGridColor(new java.awt.Color(255, 153, 0));
-        tblVehiculos.setSelectionBackground(new java.awt.Color(255, 102, 102));
-        tblVehiculos.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jScrollPane2.setViewportView(tblVehiculos);
+        });
 
-        marcaCombox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        precioCombox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
+        jLabel1.setText("Nro chasis : ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -147,31 +160,22 @@ public class Consultar extends javax.swing.JFrame {
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(ChasisLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(marcaCombox, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ChasisLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(transcombox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(ChasisLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(precioCombox, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119))
+                        .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28))))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txttNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConsultar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,21 +184,17 @@ public class Consultar extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ChasisLabel1)
-                    .addComponent(ChasisLabel)
-                    .addComponent(transcombox)
-                    .addComponent(marcaCombox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ChasisLabel2)
-                    .addComponent(precioCombox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txttNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnConsultar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -205,55 +205,54 @@ public class Consultar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 457, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void transcomboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transcomboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_transcomboxActionPerformed
-
-    private void EnviarLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarLabel1MouseClicked
+    private void btnTodosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTodosMouseClicked
         int nChasis;
-        int marca;
-        String transmision;
+        String transmision, color, marca;
         int precio;
-        DefaultTableModel modelo = (DefaultTableModel) tblVehiculos.getModel();
-                
-        /**try {
-            id = Integer.parseInt(txtId.getText());
-        } catch (Exception e) {
-            id = 0;
-        }
-        **/
+        boolean disponibilidad;
+        DefaultTableModel modelo = (DefaultTableModel) tblDatos.getModel();
         Registro rg = new Registro();
         modelo.setRowCount(0);
-            // listar todos
-            List<Vehiculo> lista = rg.consultar();
+        // listar todos
 
-            for (Vehiculo tmp : lista) {
-                nChasis = tmp.getNumeroChasis();
-                marca = tmp.getMarca();
-                transmision = tmp.getTransmision();
-                precio = tmp.getPrecio();
+        List<Vehiculo> lista = rg.consultar();
 
-                modelo.addRow(new Object[]{nChasis, marca, transmision, precio});
-            }
-        /**
-        } else { //consulta por id
-            Libro libro = rg.buscarPorId(id);
-            titulo = libro.getTitulo();
-            autor = libro.getAutor();
-            precio = libro.getPrecio();
-            disponible = libro.isDisponible();
-
-            modelo.addRow(new Object[]{titulo, autor, precio, disponible});
-
+        for (Vehiculo tmp : lista) {
+            nChasis = tmp.getNumeroChasis();
+            marca = rg.buscarMarca(tmp.getMarca());
+            transmision = tmp.getTransmision();
+            precio = tmp.getPrecio();
+            color = tmp.getColor();
+            disponibilidad = tmp.isStock();
+            modelo.addRow(new Object[]{nChasis, marca, transmision, precio,color,disponibilidad});
         }
-        **/
-    }//GEN-LAST:event_EnviarLabel1MouseClicked
+    }//GEN-LAST:event_btnTodosMouseClicked
+
+    private void btnEnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseClicked
+        Registro rg = new Registro();
+        int nroChasis = Integer.parseInt(txttNumero.getText()); 
+        Vehiculo obj = rg.buscarVehiculo(nroChasis);
+        
+        DefaultTableModel modelo = (DefaultTableModel) tblDatos.getModel();
+        modelo.setRowCount(0);
+        int nChasis = obj.getNumeroChasis();
+        String marca = rg.buscarMarca(obj.getMarca());
+        String transmision = obj.getTransmision();
+        int precio  = obj.getPrecio();
+        String color= obj.getColor();
+        boolean disponibilidad = obj.isStock();
+        modelo.addRow(new Object[]{nChasis, marca, transmision, precio, color, disponibilidad});
+    }//GEN-LAST:event_btnEnviarMouseClicked
+
+    private void txttNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttNumeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttNumeroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,20 +292,19 @@ public class Consultar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ChasisLabel;
-    private javax.swing.JLabel ChasisLabel1;
-    private javax.swing.JLabel ChasisLabel2;
-    private javax.swing.JLabel EnviarLabel1;
     private javax.swing.JPanel btnConsultar;
+    private javax.swing.JPanel btnConsultar1;
+    private javax.swing.JLabel btnEnviar;
+    private javax.swing.JLabel btnTodos;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JComboBox<String> marcaCombox;
-    private javax.swing.JComboBox<String> precioCombox;
-    private javax.swing.JTable tblVehiculos;
-    private javax.swing.JComboBox<String> transcombox;
+    private javax.swing.JTable tblDatos;
+    private javax.swing.JTextField txttNumero;
     // End of variables declaration//GEN-END:variables
 }

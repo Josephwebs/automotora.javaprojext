@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jToggleButton1"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -23,12 +30,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" pref="512" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" pref="377" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" pref="393" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -47,17 +54,8 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="EnviarPanel" min="-2" pref="199" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -93,16 +91,23 @@
                               <Component id="ModeloLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="TransmisionField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="MarcaField" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="ModeloField" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="TransmisionField" min="-2" max="-2" attributes="0"/>
+                              <Component id="ModeloField" alignment="0" pref="110" max="32767" attributes="0"/>
+                              <Component id="MarcaField" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                          <Component id="EnviarPanel" min="-2" pref="199" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="40" max="32767" attributes="0"/>
+                  <EmptySpace min="35" pref="53" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -113,7 +118,7 @@
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="NumChasisField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ChasisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -125,20 +130,20 @@
                       <Component id="ColorField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ColorLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="MarcaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="MarcaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ModeloField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PrecioField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="PrecioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ModeloLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModeloField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="MarcaField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="ChkStock" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="EnviarPanel" min="-2" pref="34" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace pref="51" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -157,10 +162,6 @@
         <Component class="javax.swing.JTextField" name="ColorField">
         </Component>
         <Component class="javax.swing.JTextField" name="PrecioField">
-        </Component>
-        <Component class="javax.swing.JTextField" name="ModeloField">
-        </Component>
-        <Component class="javax.swing.JTextField" name="MarcaField">
         </Component>
         <Component class="javax.swing.JCheckBox" name="ChkStock">
           <Properties>
@@ -350,6 +351,59 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Complete los siguientes campos"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="ModeloField">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="23">
+                <StringItem index="0" value="--Seleccione--"/>
+                <StringItem index="1" value="1. fiesta"/>
+                <StringItem index="2" value="2. aveo "/>
+                <StringItem index="3" value="3. 3 "/>
+                <StringItem index="4" value="4. swing "/>
+                <StringItem index="5" value="5. F0 "/>
+                <StringItem index="6" value="6. oneway "/>
+                <StringItem index="7" value="7. 308 "/>
+                <StringItem index="8" value="8. Explorer "/>
+                <StringItem index="9" value="9. Sport "/>
+                <StringItem index="10" value="10. Alero "/>
+                <StringItem index="11" value="11. Astro Van "/>
+                <StringItem index="12" value="12. CX-30 "/>
+                <StringItem index="13" value="13. MPV "/>
+                <StringItem index="14" value="14. Splash "/>
+                <StringItem index="15" value="15. Valeno "/>
+                <StringItem index="16" value="16. S6 "/>
+                <StringItem index="17" value="17. G3 "/>
+                <StringItem index="18" value="18. Bravo"/>
+                <StringItem index="19" value="19. Croma"/>
+                <StringItem index="20" value="20. 4007"/>
+                <StringItem index="21" value="21. 4008"/>
+                <StringItem index="22" value=" "/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="MarcaField">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="8">
+                <StringItem index="0" value="--Seleccione--"/>
+                <StringItem index="1" value="1. ford"/>
+                <StringItem index="2" value="2. chevrolet"/>
+                <StringItem index="3" value="3. mazda"/>
+                <StringItem index="4" value="4. zusuki"/>
+                <StringItem index="5" value="5. BYD"/>
+                <StringItem index="6" value="6. fiat"/>
+                <StringItem index="7" value="7. peugeot"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
